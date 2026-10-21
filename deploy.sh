@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+docker --version
+git --version
 docker build -t tp3 .
 docker rm -f tp3 >/dev/null 2>&1 || true
 docker run -d --name tp3 -p 8082:80 tp3
